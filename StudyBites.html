@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="StudyBites.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <style>
+    /* styling line underline by glowing with rgb*/
+    @keyframes borderAnimation {
+      0% {
+        border-color:white;
+      }
+      25%
+      {
+        border-color: #f9ed08;
+      }
+      50% {
+        border-color: #FFA500;
+      }
+      75%
+      {
+        border-color: rgb(39, 45, 243);
+      }
+      100% {
+        border-color: red;
+      }
+    }
+/* Styling all h2 */
+    h2 {
+      border-bottom: 3px solid;
+      display: inline-block;
+      padding: 10px;
+      padding-bottom: 0%;
+      animation: borderAnimation 3s infinite;
+      color: white;
+  
+    }
+ /* Keyframes for when we land on page,Page will move from top to bottom */
+ 
+    @keyframes slideInFromLeft {
+      0% {
+        transform: translatey(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    h1 {
+      animation: borderAnimation 3s infinite;
+    }
+
+    .hero {
+      background-color: #000;
+      color: #FFF;
+      padding: 50px;
+      animation: slideInFromLeft 1s ease-in;
+    }
+
+    .header-scrolled {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      animation: slideInFromTop 0.5s;
+      z-index: 1;
+    }
+
+    .logo {
+      font-family: "Arial", sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      color: #FFF;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+    
+    .logo span {
+      color: #f9ed08;
+    }
+
+    .hhh {
+      background-color: #ffa600;
+      height: 70px;
+    }
+    .hhh .logo
+    {
+      color: black;
+      font-size: 20px;
+    }
+    .hhh .logo span {
+      color: #0096e2;
+    }
+    .hhh nav .cart-icon
+    {
+      background-color: #000;
+      color: #FFF;
+      transition: color 0.3s ease;
+    }
+
+    .hhh nav .nav-links 
+    {
+      
+      width: 40px;
+      color: #000;
+      gap: 30px;
+    }
+    
+    .hhh nav .nav-links a{
+      transition: color 0.3s ease;
+      color: #000;
+      gap: 70px;
+    }
+    
+  </style>
+  <title>Study-Bites</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1><a href="#" class="logo">Study<span>Bites</span></a></h1>
+    
+
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <nav class="cart-container">
+      <a href="" class="cart-icon">Cart</a>
+      <span class="open-slide">
+        <a href="#"class="fas fa-bars" style="margin-left: -110px; color: whitesmoke;font-size: 25px;"></a>
+      </span>
+    </nav>
+    </nav>
+  </header>
+<br><br>
+<div id="mySidebar" class="sidebar">
+  
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+  <p>Press Menu Again For Remove</p>
+</div>
+  <section class="hero" style="height: 700px;">
+    <div  class="herodiv">
+    <h1 >Welcome to Study Bites!</h1>
+    <p>Discover a wide range of delicious snacks with crunchy bites.</p>
+    <a href="#prod"  class="btn" style="background-color:black;color: whitesmoke;">Browse Snacks</a>
+  </div>
+  </section>
+  <section id="prod"  class="products">
+    <h2>Popular Snacks</h2>
+    <div class="productpair">
+      <div class="product">
+        <img src="snack1.jpg" alt="Snack 1">
+        <h3>Snack 1</h3>
+        <p>Lays</p>
+        <button class="btn" >Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="snack2.jpg" alt="Snack 2">
+        <h3>Snack 2</h3>
+        <p>Kurkure</p>
+        <button class="btn" >Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="snack3.jpg" alt="Snack 3">
+        <h3>Snack 3</h3>
+        <p>Pufcorn</p>
+        <button class="btn">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="snack3.jpg" alt="Snack 3">
+        <h3>Snack 3</h3>
+        <p>Pufcorn</p>
+        <button class="btn">Add to Cart</button>
+      </div>
+  </section>
+
+<section class="sug">
+  <nav class="sug-con">
+
+<div style="padding-right: 50px;">
+    <img style="height: 280px; padding-right: px; padding-top: 0px; width: 500px; box-shadow: 4px 4px 25px black;"   src="EeMHa3BXsAAZfPy.jpeg" border="0" alt="animated-snack-image-0021" /></a>
+  </div>
+  <div id="sugcontainer">
+    <div id="left-side">
+      <h3>Send us your suggestions.</h3>
+    </div>
+    <section id="suggestion-section">
+      <form id="suggestion-form"
+        action=""
+        method="POST"
+        >
+        <label>
+          Your Email :
+          <input id="name"  name="email">
+        </label>
+        <label>
+          Your suggestion :
+          <textarea name="message" id="suggestion" rows="4"></textarea>
+        </label>
+        <button type="submit" class="sugbutton">Send</button>
+    
+       
+      </form>
+    </section>
+  </div>
+</nav>
+</section>
+
+
+  <section class="products">
+    <nav class="h2">
+      <h2 class="cs">Common Snacks</h2>
+    </nav>
+    <div class="productpair">
+      <div class="product">
+        <img src="snack1.jpg" alt="Snack 1">
+        <h3>Snack 1</h3>
+        <p>Lays</p>
+        <button class="btn" >Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="snack2.jpg" alt="Snack 2">
+        <h3>Snack 2</h3>
+        <p>Kurkure</p>
+        <button class="btn" >Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="snack3.jpg" alt="Snack 3">
+        <h3>Snack 3</h3>
+        <p>Pufcorn</p>
+        <button class="btn" >Add to Cart</button>
+      </div>
+    </div>
+    <div class="productpair">
+      <div class="product">
+        <img src="snack1.jpg" alt="Snack 1">
+        <h3>Snack 1</h3>
+        <p>Lays</p>
+        <button class="btn" >Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="snack2.jpg" alt="Snack 2">
+        <h3>Snack 2</h3>
+        <p>Kurkure</p>
+        <button class="btn" >Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="snack3.jpg" alt="Snack 3">
+        <h3>Snack 3</h3>
+        <p>Pufcorn</p>
+        <button class="btn" >Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <section class="team-introduction">
+    <h2>Meet Our Team</h2>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="team-member">
+                <img src="11.jpeg" alt="Member 1">
+                <h3> </h3>
+                <p></p>
+                <div class="social-links">
+                    <a href="#" target="_blank">Facebook</a>
+                    <a href="#" target="_blank">Twitter</a>
+                    <a href="#" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+            <div class="team-member selected">
+                <img src="11.jpeg" alt="Member 2">
+                <h3>Yash Meena</h3>
+                <p>Frontend Developer</p>
+                <div class="social-links">
+                    <a href="#" target="_blank">Facebook</a>
+                    <a href="#" target="_blank">Twitter</a>
+                    <a href="#" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="11.jpeg" alt="Member 3">
+                <h3></h3>
+                <p></p>
+                <div class="social-links">
+                    <a href="#" target="_blank">Facebook</a>
+                    <a href="#" target="_blank">Twitter</a>
+                    <a href="#" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <div class="slider-navigation">
+          <button class="next-btn" onclick="">Prev</button>
+            <button class="prev-btn" onclick="">Next</button>
+        </div>
+    </div>
+
+    <div class="feed" style="color: #FFF;padding-top: 30px; ">
+      <div class="feedback-container" style="display: flex; gap: 50px;">
+        <div style="align-items: center;">
+        <div class="text" style="display: flex; font-size: 30px; font-weight: bold; align-items: center; text-align: center;padding-left: 29%;">
+        <div class="study-text" style="color: #fff;">Study</div><div class="bites-text" style="color:blue;"> Bites</div></div>
+        <div class="feedback-text">Your Feedback Is Important For Us!!</div></div>
+        <div class="feedback-form">
+          <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+    
+            <label for="rating">Rate Us:</label>
+            <div class="rating">
+              <span class="star" onclick="">&#9733;</span>
+              <span class="star" onclick="">&#9733;</span>
+              <span class="star" onclick="">&#9733;</span>
+              <span class="star" onclick="">&#9733;</span>
+              <span class="star" onclick="">&#9733;</span>
+            </div>
+    
+    
+            <input type="submit" style="background-color: #007BFF; color: #FFF;" value="Submit">
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+</section>
+
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3 class="h">About Us</h3>
+        <div class="footer-column2">
+          <p>Updating soon</p>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h3 class="h">Contact Us</h3>
+        <div class="footer-column2">
+          <p>Room No.453, Hoste Block, IIITN</p>
+          <p>Email: </p>
+          <p>Phone: +91 8290547697</p>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h3 class="h">Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  
+ <script>
+  window.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('header');
+    const hero = document.querySelector('.hero');
+    
+    header.classList.add('header-scrolled');
+    hero.classList.add('hero-animated');
+  });
+</script>
+<script type="text/javascript">
+  $(window).on('scroll', function() {
+    if ($(window).scrollTop()) {
+      $('header').addClass('hhh');
+    } else {
+      $('header').removeClass('hhh');
+    }
+    
+  });
+</script>
+</body>
+</html>
