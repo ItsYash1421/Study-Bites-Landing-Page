@@ -124,10 +124,10 @@
     
 
       <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Shop</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="StudyBites.html">Home</a></li>
+        <li><a href="#cs">Shop</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
       <nav class="cart-container">
       <a href="" class="cart-icon">Cart</a>
@@ -156,25 +156,25 @@
     <h2>Popular Snacks</h2>
     <div class="productpair">
       <div class="product">
-        <img src="snack1.jpg" alt="Snack 1">
+        <img src="lays.jpeg" alt="Snack 1">
         <h3>Snack 1</h3>
         <p>Lays</p>
         <button class="btn" >Add to Cart</button>
       </div>
       <div class="product">
-        <img src="snack2.jpg" alt="Snack 2">
+        <img src="kurkure.jpeg" alt="Snack 2">
         <h3>Snack 2</h3>
         <p>Kurkure</p>
         <button class="btn" >Add to Cart</button>
       </div>
       <div class="product">
-        <img src="snack3.jpg" alt="Snack 3">
+        <img src="puf1.jpg" alt="Snack 3">
         <h3>Snack 3</h3>
         <p>Pufcorn</p>
         <button class="btn">Add to Cart</button>
       </div>
       <div class="product">
-        <img src="snack3.jpg" alt="Snack 3">
+        <img src="puf2.jpeg" alt="Snack 3">
         <h3>Snack 3</h3>
         <p>Pufcorn</p>
         <button class="btn">Add to Cart</button>
@@ -185,7 +185,7 @@
   <nav class="sug-con">
 
 <div style="padding-right: 50px;">
-    <img style="height: 280px; padding-right: px; padding-top: 0px; width: 500px; box-shadow: 4px 4px 25px black;"   src="EeMHa3BXsAAZfPy.jpeg" border="0" alt="animated-snack-image-0021" /></a>
+    <img class="sugestion-img" cstyle="height: 280px; padding-right: px; padding-top: 0px; width: 500px; box-shadow: 4px 4px 25px black;"   src="EeMHa3BXsAAZfPy.jpeg" border="0" alt="animated-snack-image-0021" /></a>
   </div>
   <div id="sugcontainer">
     <div id="left-side">
@@ -216,23 +216,23 @@
 
   <section class="products">
     <nav class="h2">
-      <h2 class="cs">Common Snacks</h2>
+      <h2 id="cs" class="cs">Common Snacks</h2>
     </nav>
     <div class="productpair">
       <div class="product">
-        <img src="snack1.jpg" alt="Snack 1">
+        <img src="lays.jpeg" alt="Snack 1">
         <h3>Snack 1</h3>
         <p>Lays</p>
         <button class="btn" >Add to Cart</button>
       </div>
       <div class="product">
-        <img src="snack2.jpg" alt="Snack 2">
+        <img src="kurkure.jpeg" alt="Snack 2">
         <h3>Snack 2</h3>
         <p>Kurkure</p>
         <button class="btn" >Add to Cart</button>
       </div>
       <div class="product">
-        <img src="snack3.jpg" alt="Snack 3">
+        <img src="puf1.jpg" alt="Snack 3">
         <h3>Snack 3</h3>
         <p>Pufcorn</p>
         <button class="btn" >Add to Cart</button>
@@ -240,19 +240,19 @@
     </div>
     <div class="productpair">
       <div class="product">
-        <img src="snack1.jpg" alt="Snack 1">
+        <img src="lays2.jpg" alt="Snack 1">
         <h3>Snack 1</h3>
         <p>Lays</p>
         <button class="btn" >Add to Cart</button>
       </div>
       <div class="product">
-        <img src="snack2.jpg" alt="Snack 2">
+        <img src="kurkure2.webp" alt="Snack 2">
         <h3>Snack 2</h3>
         <p>Kurkure</p>
         <button class="btn" >Add to Cart</button>
       </div>
       <div class="product">
-        <img src="snack3.jpg" alt="Snack 3">
+        <img src="puf2.jpeg" alt="Snack 3">
         <h3>Snack 3</h3>
         <p>Pufcorn</p>
         <button class="btn" >Add to Cart</button>
@@ -339,13 +339,18 @@
   <footer>
     <div class="footer-container">
       <div class="footer-column">
-        <h3 class="h">About Us</h3>
+        <h3 id="about" class="h">About Us</h3>
         <div class="footer-column2">
-          <p>Updating soon</p>
+          <p>Welcome to Study Bites, your ultimate destination for bite-sized learning! At Study Bites, 
+            we believe in making education accessible, engaging, and effective for everyone.
+             Our mission is to break down complex topics into easy-to-digest lessons, 
+             ensuring that learning fits seamlessly into your busy life.
+
+          </p>
         </div>
       </div>
       <div class="footer-column">
-        <h3 class="h">Contact Us</h3>
+        <h3 id="contact" class="h">Contact Us</h3>
         <div class="footer-column2">
           <p>Room No.453, Hoste Block, IIITN</p>
           <p>Email: </p>
@@ -363,24 +368,58 @@
       </div>
     </div>
   
- <script>
-  window.addEventListener('DOMContentLoaded', function() {
-    const header = document.querySelector('header');
-    const hero = document.querySelector('.hero');
-    
-    header.classList.add('header-scrolled');
-    hero.classList.add('hero-animated');
-  });
-</script>
-<script type="text/javascript">
-  $(window).on('scroll', function() {
-    if ($(window).scrollTop()) {
-      $('header').addClass('hhh');
-    } else {
-      $('header').removeClass('hhh');
-    }
-    
-  });
-</script>
+    <script>
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+  
+      // Adding header scrolled class on scroll
+      $(window).on('scroll', function() {
+        if ($(window).scrollTop()) {
+          $('header').addClass('hhh');
+        } else {
+          $('header').removeClass('hhh');
+        }
+      });
+  
+      // Slider functionality
+      const teamMembers = document.querySelectorAll(".team-member");
+      const prevBtn = document.querySelector(".prev-btn");
+      const nextBtn = document.querySelector(".next-btn");
+      
+      let activeIndex = Math.floor(teamMembers.length / 2); // Start with the middle team member as selected
+      
+      function showMember(index) {
+          teamMembers.forEach((member, i) => {
+              member.classList.remove("active", "selected");
+              if (i === index) {
+                  member.classList.add("active", "selected");
+              }
+          });
+      }
+      
+      function showNext() {
+          activeIndex = (activeIndex + 1) % teamMembers.length;
+          showMember(activeIndex);
+      }
+      
+      function showPrevious() {
+          activeIndex = (activeIndex - 1 + teamMembers.length) % teamMembers.length;
+          showMember(activeIndex);
+      }
+      
+      // Highlight the middle profile on page load
+      showMember(activeIndex);
+      
+      nextBtn.addEventListener("click", showNext);
+      prevBtn.addEventListener("click", showPrevious);
+  
+    </script>
 </body>
 </html>
